@@ -5,8 +5,11 @@ class Api::PokemonController < ApplicationController
         render :index 
     end
 
-    # def show 
-
-    # end
+    def show 
+        @pokemon = Pokemon.find(params[:id])
+        if @pokemon
+            render :show
+        end
+    end
 
 end
